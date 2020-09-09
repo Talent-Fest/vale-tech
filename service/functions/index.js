@@ -22,6 +22,8 @@ app.get('/', (res) => {
   res.status(200).send('ok')
 });
 
+let token;
+
 got
   .post(
     'https://hublaboratoria1:hublaboratoria1@qacst-ppi.hubprepaid.com.br/partner-interface-oauth2/oauth/token',
@@ -34,7 +36,11 @@ got
       }
     }
   )
-  .then(res => console.log(JSON.parse(res.body)))
+  .then((res) => {
+    const json = JSON.parse(res.body);
+    token = json['access_token']
+    return console.log(token);
+  })
   .catch(err => console.log(err));
 
 exports.api = functions.https.onRequest(app);
