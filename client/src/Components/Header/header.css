@@ -1,0 +1,30 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #EEF0F4;
+  padding: 10px 0px 10px 0px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-wrapper img {
+  width: 200px;
+  align-self: flex-start;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .header-wrapper {
+    padding: 10px 0px 10px 0px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
