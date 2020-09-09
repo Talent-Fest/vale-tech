@@ -1,12 +1,25 @@
 import React from 'react';
-import Header from '../src/Components/Header/index';
-import Footer from '../src/Components/Footer/index';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+/*Páginas*/
+import Home from '../src/Pages/home';
+import Account from '../src/Pages/account';
 
 function App() {
   return (
-    <div className="App">
-      <p>Olá</p>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/account' component={Account} />
+        <Route path='*'>
+          <div>Página não encontrada</div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
