@@ -1,5 +1,7 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
+
+const got = require('got');
 const cors = require('cors');
 const express = require('express');
 
@@ -16,12 +18,23 @@ admin.initializeApp({
 const app = express();
 app.use(cors({ origin: true }));
 
-app.get('/urldahub', (req, res) => {
-  res.status(200).send('ok');
+app.get('/', (res) => {
+  res.status(200).send('ok')
 });
 
-app.post('/', (req, res) => {
-  res.status(200).send('ok');
-});
+got
+  .post(
+    'https://hublaboratoria1:hublaboratoria1@qacst-ppi.hubprepaid.com.br/partner-interface-oauth2/oauth/token',
+    {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      form: {
+        'grant_type': 'client_credentials'
+      }
+    }
+  )
+  .then(res => console.log(JSON.parse(res.body)))
+  .catch(err => console.log(err));
 
 exports.api = functions.https.onRequest(app);
