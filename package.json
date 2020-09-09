@@ -1,0 +1,20 @@
+{
+  "name": "vale-tech",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talent-Fest/vale-tech.git"
+  },
+  "author": "Thais Durynek <thais.durynek@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talent-Fest/vale-tech/issues"
+  },
+  "homepage": "https://github.com/Talent-Fest/vale-tech#readme"
+}
