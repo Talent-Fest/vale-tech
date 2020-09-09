@@ -39,7 +39,6 @@ got
   .then((res) => {
     const json = JSON.parse(res.body);
     token = json['access_token']
-    return console.log(token);
   })
   .catch(err => console.log(err));
 
