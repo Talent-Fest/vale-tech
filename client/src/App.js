@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 
 /*Páginas*/
-import Home from '../src/Pages/home';
-import Account from '../src/Pages/account';
+import Home from './Pages/home';
+import Account from './Pages/account';
 
 function App() {
   return (
