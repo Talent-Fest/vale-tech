@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../Components/Header/index';
-import Footer from '../../Components/Footer/index';
-import Button from '../../Components/Button/index';
-import Input from '../../Components/Input/index';
+import Header from '../../components/Header/index';
+import Footer from '../../components/Footer/index';
+import Button from '../../components/Button/index';
+import Input from '../../components/Input/index';
 import Logo from '../../img/logoValeTech.png';
 import './account.css';
 import growl from 'growl-alert';
@@ -21,7 +21,7 @@ const Account = () => {
       </div>
       <div>
         <figure className='logo-form'>
-          <img src={Logo} />
+          <img src={Logo} alt=''/>
         </figure>
         <div className='text-info'>
           <p>Aqui você se cadastra para receber apoio financeiro das empresas parceiras.
