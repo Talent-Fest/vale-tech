@@ -3,11 +3,11 @@ import Button from '../components/Button/index';
 import Header from '../components/Header/index';
 import Footer from '../components/Footer/index';
 import Input from '../components/Input/index';
+import OngCard from '../components/OngCard/index';
 
 const Transaction = () => {
   const [form, setForm] = useState(false);
   const [data, setData] = useState({});
-
 
   const showForm = (e) => {
     e.preventDefault();
@@ -39,20 +39,26 @@ const Transaction = () => {
     return (
         <section>
             <Header />
-            <div>Componente de ONG</div>
+            <OngCard
+              image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
+              name="Ong"
+              createdAt="08/2020"
+              email="www.ong.com.br"
+              balanceAmount="5000"
+            />
             <p>Nós da Vale Tech recebemos doações de empresas apoiadoras 
                 e fazemos o repasse para ONG's com programas voltados a área de tecnologia. 
                 Para garantir que o dinheiro doado está sendo usado para as finalidades sociais, 
                 contamos com gráficos e extratos público de gastos.
             </p>
-            <Button onClick={showForm} text='Fazer Doação' />
+            <Button onClick={showForm} children={'Dar um Vale Tech'} />
             {form ? (
                 <form>
                   <label>Valor:</label>
                   <Input onChange={(e) => setData({ ...data, amount: e.target.value})}/>
                   <label>Conta:</label>
                   <Input onChange={(e) => setData({ ...data, account: e.target.value})}/>
-                  <Button onClick={sendTransaction} />
+                  <Button onClick={sendTransaction} children={'Transferir'}/>
                 </form>
             ) : null}
             <Footer />
