@@ -1,0 +1,29 @@
+.containerOngCard {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image {
+  display: flex;
+  border-radius: 50%;
+  width: 30%;
+}
+
+.cardData {
+  flex-wrap: wrap;
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  color: #748FC5;
+  font-size: 14px;
+}
+
+.nameOng {
+  color: #FFB258;
+  display: flex;
+  width: 100%;
+}
+

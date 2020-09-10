@@ -9,6 +9,7 @@ import {
 import Home from '../src/Pages/home';
 import Account from './Pages/Account/account';
 import Transaction from './Pages/transaction';
+import Balance from './Pages/Balance';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/account' component={Account} />
         <Route path='/transaction' component={Transaction} />
+        <Route path='/balance' component={Balance} />
         <Route path='*'>
           <div>Página não encontrada</div>
         </Route>
