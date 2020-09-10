@@ -1,13 +1,13 @@
 import React from 'react';
-import './footer.css';
+import style from './style.module.css';
 
 const Footer = () => {
 
     return (
-        <footer className='footer-info'>
-            <p>QUEM SOMOS</p>
-            <p>PARCEIROS</p>
-            <p>PORQUE APOIAR</p>
+        <footer className={style.footerInfo}>
+            <p className={style.footerItem}>QUEM SOMOS</p>
+            <p className={style.footerItem}>PARCEIROS</p>
+            <p className={style.footerItem}>PORQUE APOIAR</p>
         </footer>
     );
 }

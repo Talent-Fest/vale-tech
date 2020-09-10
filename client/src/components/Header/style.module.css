@@ -1,4 +1,4 @@
-.header-wrapper {
+.headerWrapper {
   display: flex;
   flex-direction: row;
   background-color: #EEF0F4;
@@ -7,23 +7,23 @@
   justify-content: flex-start;
 }
 
-.header-wrapper img {
-  width: 200px;
+.headerWrapper img {
+  width: 50%;
   align-self: flex-start;
-  padding-left: 20px;
   justify-content: center;
 }
 
 @media (max-width: 800px) {
-  .header-wrapper {
-    padding: 10px 0px 10px 0px;
+  .headerWrapper {
+    padding: 5px 0px 5px 0px;
     align-items: center;
     justify-content: flex-start;
+    height: 45px;
   }
 }
 
 @media (max-width: 450px) {
-  .header-wrapper {
+  .headerWrapper {
     display: flex;
     flex-direction: row;
   }

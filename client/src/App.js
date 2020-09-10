@@ -8,6 +8,7 @@ import {
 /*Páginas*/
 import Home from '../src/Pages/home';
 import Account from './Pages/Account/account';
+import Balance from './pages/Balance';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/account' component={Account} />
+        <Route path='/balance' component={Balance} />
         <Route path='*'>
           <div>Página não encontrada</div>
         </Route>
