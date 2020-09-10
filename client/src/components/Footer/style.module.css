@@ -1,0 +1,16 @@
+@media (max-width: 800px) {
+  .footerInfo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFB258;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    flex-wrap: wrap;
+  }
+
+  .footerItem{
+    flex:1;
+    padding: 10px;
+  }
+}
