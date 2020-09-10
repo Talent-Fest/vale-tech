@@ -4,8 +4,7 @@ import style from './style.module.css';
 
 const PieChart = (props) => {
 	return(
-		<section className={style.pieChart}
-		>
+		<section className={style.pieChart}>
 			<h1 className={style.titlePie}>{props.title}</h1>
 			<Pie 
 				data={props.data} 

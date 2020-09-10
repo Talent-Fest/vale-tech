@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Bancos",
+    "amount": 8000
+  },
+  {
+    "name": "Startups",
+    "amount": 5000
+  },
+  {
+    "name": "Cursos",
+    "amount": 2000
+  }
+]

@@ -7,6 +7,10 @@
   justify-content: flex-start;
 }
 
+.logoHeader {
+  margin: 0;
+}
+
 .headerWrapper img {
   width: 50%;
   align-self: flex-start;
