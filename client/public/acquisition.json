@@ -1,0 +1,27 @@
+[
+  {
+    "discription": "Udemy",
+    "date":08/2020,
+    "amount": 8000
+  },
+  {
+    "discription": "Udemy",
+    "date": 08/2020,
+    "amount": 200
+  },
+  {
+    "discription": "Monitor",
+    "date": 07/2020,
+    "amount": 1000
+  },
+  {
+    "discription": "Allura",
+    "date":07/2020,
+    "amount": 8000
+  },
+  {
+    "discription": "Origamid",
+    "date": 06/2020,
+    "amount": 100
+  }
+]

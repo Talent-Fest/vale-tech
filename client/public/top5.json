@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Empresa1",
+    "amount": 8000
+  },
+  {
+    "name": "Empresa2",
+    "amount": 5000
+  },
+  {
+    "name": "Empresa3",
+    "amount": 2000
+  },
+  {
+    "name": "Empresa4",
+    "amount": 1000
+  },
+  {
+    "name": "Empresa5",
+    "amount": 500
+  }
+]
