@@ -1,0 +1,10 @@
+.btn-register {
+  display: flex;
+  background-color: #FFB258;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 5px;
+  border: 2px solid #FFB258;
+  margin-top: 20px;
+}

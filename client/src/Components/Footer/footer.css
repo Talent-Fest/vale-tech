@@ -8,6 +8,8 @@
   font-weight: 500;
   padding: 10px 0px 10px 0px;
   margin-top: 15px;
+  bottom: 0px;
+  position: static;
 }
 
 .footer-info a {

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Button from '../components/Button/index';
 import Header from '../components/Header/index';
 import Footer from '../components/Footer/index';
-import Form from '../components/Form/form';
+import Input from '../components/Input/index';
 
 const Transaction = () => {
   const [form, setForm] = useState(false);
   const [data, setData] = useState({});
-  //const [body, setBody] = useState({});
+
 
   const showForm = (e) => {
     e.preventDefault();
@@ -21,8 +21,8 @@ const Transaction = () => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        "amount": data,
-        "toFinancialOperationKey":"200002043",
+        "amount": data.amount,
+        "toFinancialOperationKey": data.account,
         "transferCode":"574247d0-10a8-47c9-b12b-66529d5a27a0",
         "summary":"Transferencia P2P para teste",
         "idempotencyKey":"fdce002c-43a7-49b9-8426-c5fb7f79affb"
@@ -45,9 +45,15 @@ const Transaction = () => {
                 Para garantir que o dinheiro doado está sendo usado para as finalidades sociais, 
                 contamos com gráficos e extratos público de gastos.
             </p>
-            <Button onClick={showForm}>Fazer Doação</Button>
+            <Button onClick={showForm} text='Fazer Doação' />
             {form ? (
-                <Form onClick={sendTransaction} onChange={(e) => setData(e.target.value)}/>
+                <form>
+                  <label>Valor:</label>
+                  <Input onChange={(e) => setData({ ...data, amount: e.target.value})}/>
+                  <label>Conta:</label>
+                  <Input onChange={(e) => setData({ ...data, account: e.target.value})}/>
+                  <Button onClick={sendTransaction} />
+                </form>
             ) : null}
             <Footer />
         </section>

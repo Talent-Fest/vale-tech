@@ -1,0 +1,34 @@
+.logo-form {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-form img {
+  height: auto;
+  width: 300px;
+}
+
+.text-info {
+  text-align: center;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 100px 40px 100px;
+  padding: 40px;
+  background-color: #AFB7C7;
+}
+
+.div-register {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 10px 5px;
+  font-size: 15px;
+  color: whitesmoke;
+}
+
+.div-btn-register {
+  display: flex;
+  justify-content: center;
+}
