@@ -8,6 +8,8 @@ import ButtonCreditCard from '../../Components/ButtonCreditCard';
 import Img from '../../img/ong.png';
 import style from './style.module.css'
 
+
+
 const dataBar = {
   labels: ['Gastos', 'Arrecadação'],
   datasets: [
@@ -52,6 +54,7 @@ const createTop5Data = (top5) => {
 
 const Balance= () => {
   const [top5Data, setTop5Data] = useState([]);
+  const [aquesitionData, setAquesitionData] = useState([])
 
   useEffect(() => {
     fetch('./top5.json')
@@ -59,7 +62,11 @@ const Balance= () => {
     .then(data => setTop5Data(data))
   }, [top5Data, setTop5Data])
   
-
+  useEffect(() => {
+    fetch('./acquisition.json')
+    .then((response) =>  response.json())
+    .then(data => setAquesitionData(data))
+  }, [aquesitionData, setAquesitionData])
   
   return (
     <div className="App">

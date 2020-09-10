@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/index';
-import Button from '../../Components/Button/index';
+import Button from '../../Components/Button';
 import Input from '../../Components/Input/index';
 import Logo from '../../img/logoValeTech.png';
 import './account.css';
