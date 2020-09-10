@@ -6,7 +6,8 @@ import PieChart from '../../Components/PieChart';
 import BarChart from '../../Components/BarChart';
 import ButtonCreditCard from '../../Components/ButtonCreditCard';
 import Img from '../../img/ong.png';
-import style from './style.module.css'
+import style from './style.module.css';
+import BalanceTable from '../../Components/BalanceTable';
 
 
 
@@ -85,6 +86,9 @@ const Balance= () => {
       />
       <BarChart
       data={dataBar}
+      />
+      <BalanceTable
+      data={aquesitionData}
       />
       <img src={Img} alt="img" className={style.imgOng} />
       <Footer/>
