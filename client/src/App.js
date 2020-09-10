@@ -7,7 +7,7 @@ import {
 
 /*Páginas*/
 import Home from '../src/Pages/home';
-import Account from '../src/Pages/account';
+import Account from './Pages/Account/account';
 
 function App() {
   return (
