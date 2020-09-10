@@ -5,6 +5,7 @@ import PieChart from '../../Components/PieChart';
 import ImgWomanCode from '../../img/home.png';
 import LogoOng from '../../img/patinho.jpg';
 import style from './style.module.css';
+import { Link, withRouter } from 'react-router-dom';
 
 const createTop5Data = (top5) => {
     const labels = top5.map((item) => item.name)
@@ -40,7 +41,7 @@ const Home = () => {
         fetch('./top3.json')
             .then((response) => response.json())
             .then(data => setTop5Data(data))
-    }, [top5Data, setTop5Data])
+    }, [top5Data, setTop5Data]);
 
     return (
         <>
@@ -54,14 +55,14 @@ const Home = () => {
                         para as finalidades sociais, contamos com gráficos e extratos público de gastos.
                     </p>
                     <div className={style.allOngs}>
-                        <p className={style.seeMoreOng}>Ver todas as ONGS</p>
-                        <div className={style.boxOng}>
-                            <img className={style.ong} src={LogoOng} alt="imagem de um patinho fofo" />
-                            <img className={style.ong} src={LogoOng} alt="imagem de um patinho fofo" />
-                            <img className={style.ong} src={LogoOng} alt="imagem de um patinho fofo" />
-                            <img className={style.ong} src={LogoOng} alt="imagem de um patinho fofo" />
-                            <img className={style.ong} src={LogoOng} alt="imagem de um patinho fofo" />
-                        </div>
+                        <p className={style.seeMoreOng}>Ver todas as ONG's</p>
+                        <Link to="/balance" className={style.boxOng}>
+                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                        </Link>
                     </div>
                     <div>
                         <PieChart
@@ -79,4 +80,5 @@ const Home = () => {
     )
 }
 
-export default Home;
+const connectedWithRouter = withRouter(Home);
+export default connectedWithRouter;

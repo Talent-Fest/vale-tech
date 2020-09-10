@@ -17,11 +17,11 @@ const Account = () => {
   return (
     <div>
       <div>
-        <Header />
+        <Header signout="ok" />
       </div>
       <div>
         <figure className='logo-form'>
-          <img src={Logo} alt=''/>
+          <img src={Logo} alt='' />
         </figure>
         <div className='text-info'>
           <p>Aqui você se cadastra para receber apoio financeiro das empresas parceiras.

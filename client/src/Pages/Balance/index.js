@@ -63,7 +63,7 @@ const Balance= () => {
   
   return (
     <div className="App">
-      <Header/>
+      <Header signout="ok"/>
       <OngCard
         image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
         name="Ong"
