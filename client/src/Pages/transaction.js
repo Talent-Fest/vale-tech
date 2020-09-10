@@ -21,7 +21,7 @@ const Transaction = () => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        "amount":5,
+        "amount": data,
         "toFinancialOperationKey":"200002043",
         "transferCode":"574247d0-10a8-47c9-b12b-66529d5a27a0",
         "summary":"Transferencia P2P para teste",
