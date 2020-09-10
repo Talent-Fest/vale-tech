@@ -3,7 +3,7 @@ import style from "./style.module.css";
 
 const LogoOut = () => {
   return (
-    <a href="/logout" className={style.logout}>
+    <a href="/" className={style.logout}>
       SAIR
     </a>
   );

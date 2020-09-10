@@ -1,3 +1,13 @@
+.footerInfo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFB258;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
 @media (max-width: 800px) {
   .footerInfo {
     display: flex;
@@ -9,8 +19,16 @@
     flex-wrap: wrap;
   }
 
-  .footerItem{
+  .footerItem {
     flex:1;
     padding: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footerInfo {
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 100;
   }
 }

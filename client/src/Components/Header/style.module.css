@@ -5,6 +5,8 @@
   padding: 10px 0px 10px 0px;
   align-items: center;
   justify-content: flex-start;
+  height: 50px;
+  width: auto;
 }
 
 .headerWrapper img {
