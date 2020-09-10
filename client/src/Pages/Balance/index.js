@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import OngCard from '../../components/OngCard';
-import PieChart from '../../components/PieChart';
-import BarChart from '../../components/BarChart';
-import ButtonCreditCard from '../../components/ButtonCreditCard';
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import OngCard from '../../Components/OngCard';
+import PieChart from '../../Components/PieChart';
+import BarChart from '../../Components/BarChart';
+import ButtonCreditCard from '../../Components/ButtonCreditCard';
 import Img from '../../img/ong.png';
 import style from './style.module.css'
 

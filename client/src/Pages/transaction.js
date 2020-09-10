@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Button from '../components/Button/index';
-import Header from '../components/Header/index';
-import Footer from '../components/Footer/index';
-import Input from '../components/Input/index';
-import OngCard from '../components/OngCard/index';
+import Button from '../Components/Button/index';
+import Header from '../Components/Header/index';
+import Footer from '../Components/Footer/index';
+import Input from '../Components/Input/index';
+import OngCard from '../Components/OngCard/index';
 
 const Transaction = () => {
   const [form, setForm] = useState(false);
