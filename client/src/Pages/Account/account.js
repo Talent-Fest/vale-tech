@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/index';
 import Button from '../../Components/Button/index';
 import Input from '../../Components/Input/index';
 import Logo from '../../img/logoValeTech.png';
 import './account.css';
+import growl from 'growl-alert';
+import 'growl-alert/dist/growl-alert.css';
 
 const Account = () => {
 
   const cadastrar = () => {
-    alert('passei aqui')
+    growl({ text: 'Cadastro efetuado com sucesso!', type: 'success', fadeAway: true, fadeAwayTimeout: 2000 });
   };
 
   return (
@@ -26,7 +28,7 @@ const Account = () => {
           Se atente aos termos de uso e preencha os dados corretamente.</p>
         </div>
 
-        <form className='form-register'>
+        <div className='form-register'>
           <div className='div-register'>
             <label for='name'>NOME</label>
             <Input className='input-register' id='name' type='text' />
@@ -78,7 +80,7 @@ const Account = () => {
           <div className='div-btn-register'>
             <Button onClick={cadastrar} className='btn-register' children={'Cadastrar'} />
           </div>
-        </form>
+        </div>
 
       </div>
       <div className='footer-info-page'>
