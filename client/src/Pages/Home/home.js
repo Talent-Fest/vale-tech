@@ -46,7 +46,7 @@ const Home = () => {
     return (
         <>
             <section className={style.section}>
-                <Header />
+                <Header register="ok" login="ok" />
                 <main className={style.main}>
                     <img className={style.logoHome} src={ImgWomanCode} alt="mulher no computador escrevendo código" />
                     <p className={style.aboutUs}>
