@@ -10,6 +10,8 @@
 
 .text-info {
   text-align: center;
+  margin: 15px;
+  font-size: 16px;
 }
 
 .form-register {
@@ -31,4 +33,19 @@
 .div-btn-register {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 450px) {
+  .logo-form img {
+    height: auto;
+    width: 120px;
+}
+  .form-register {
+    margin: 5px 2px 15px 5px;
+    padding: 15px;
+  }
+
+  .div-register {
+  font-size: 12px;
+  }
 }
