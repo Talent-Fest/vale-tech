@@ -9,22 +9,27 @@ import Img from '../../img/ong.png';
 import style from './style.module.css';
 import BalanceTable from '../../Components/BalanceTable';
 
+  const createdBarData = (bar) => {
+    const labels = bar.map((item) => item.label)
+    const data = bar.map((item) => item.amount) 
 
+    const dataBar = {
+    labels,
+    datasets: [
+      {
+        label: 'Arrecadados x Gastos',
+        backgroundColor: 'rgb(213,131,31)',
+        borderColor: 'rgba(255,243,254)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(234,245,255)',
+        hoverBorderColor: 'rgba(234,245,255)',
+        data
+      }
+    ]
+  }
+    return dataBar;
+  };
 
-const dataBar = {
-  labels: ['Gastos', 'Arrecadação'],
-  datasets: [
-    {
-      label: 'Gráfico de consum',
-      backgroundColor: 'rgba(200,233,234)',
-      borderColor: 'rgba(255,243,254)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(234,245,255)',
-      hoverBorderColor: 'rgba(234,245,255)',
-      data: [40, 30]
-    }
-  ]
-};
 
 const createTop5Data = (top5) => {
   const labels = top5.map((item) => item.name)
@@ -56,6 +61,7 @@ const createTop5Data = (top5) => {
 const Balance= () => {
   const [top5Data, setTop5Data] = useState([]);
   const [aquesitionData, setAquesitionData] = useState([])
+  const [barData, setBarData] = useState([])
 
   useEffect(() => {
     fetch('./top5.json')
@@ -68,9 +74,15 @@ const Balance= () => {
     .then((response) =>  response.json())
     .then(data => setAquesitionData(data))
   }, [aquesitionData, setAquesitionData])
+
+  useEffect(() => {
+    fetch('./bar.json')
+    .then((response) =>  response.json())
+    .then(data => setBarData(data))
+  }, [barData, setBarData])
   
   return (
-    <div className="App">
+    <div className={style.app}>
       <Header/>
       <OngCard
         image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
@@ -79,13 +91,18 @@ const Balance= () => {
         email="www.ong.com.br"
         balanceAmount="5000"
       />
-      <ButtonCreditCard>Solicitar Cartão</ButtonCreditCard>
+      <div
+        className={style.buttonCard}
+      >
+        <ButtonCreditCard/>
+      </div>
       <PieChart
       data={createTop5Data(top5Data)}
       title="As 5 Empresas que mais apoiam"
       />
       <BarChart
-      data={dataBar}
+      data={createdBarData(barData)}
+      title="Arrecadados x Gastos"
       />
       <BalanceTable
       data={aquesitionData}
