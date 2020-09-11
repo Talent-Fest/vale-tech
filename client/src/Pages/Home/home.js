@@ -3,7 +3,11 @@ import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import PieChart from '../../Components/PieChart';
 import ImgWomanCode from '../../img/home.png';
-import LogoOng from '../../img/patinho.jpg';
+import Logo1 from '../../img/logo1.jpeg';
+import Logo2 from '../../img/logo2.jpeg';
+import Logo3 from '../../img/logo3.jpeg';
+import Logo4 from '../../img/logo4.jpeg';
+import Logo5 from '../../img/logo5.jpeg';
 import style from './style.module.css';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -57,11 +61,11 @@ const Home = () => {
                     <div className={style.allOngs}>
                         <p className={style.seeMoreOng}>Ver todas as ONG's</p>
                         <Link to="/balance" className={style.boxOng}>
-                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
-                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
-                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
-                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
-                            <img src={LogoOng} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={Logo5} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={Logo2} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={Logo3} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={Logo4} className={style.ong} alt="imagem de um patinho fofo" />
+                            <img src={Logo1} className={style.ong} alt="imagem de um patinho fofo" />
                         </Link>
                     </div>
                     <div>
