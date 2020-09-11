@@ -8,7 +8,7 @@ import {
 /*Páginas*/
 import Home from '../src/Pages/home';
 import Account from './Pages/Account/account';
-import Transaction from './Pages/transaction';
+import Transaction from './Pages/Transaction/transaction';
 import Balance from './Pages/Balance';
 
 function App() {

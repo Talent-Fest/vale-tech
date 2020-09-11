@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Button from '../Components/Button/index';
-import Header from '../Components/Header/index';
-import Footer from '../Components/Footer/index';
-import Input from '../Components/Input/index';
+import Button from '../../Components/Button/index';
+import Header from '../../Components/Header/index';
+import Footer from '../../Components/Footer/index';
+import Input from '../../Components/Input/index';
+import OngCard from '../../Components/OngCard/index';
+import style from './style.module.css';
 
 const Transaction = () => {
   const [form, setForm] = useState(false);
   const [data, setData] = useState({});
-
 
   const showForm = (e) => {
     e.preventDefault();
@@ -37,22 +38,29 @@ const Transaction = () => {
     }
 
     return (
-        <section>
+        <section className={style.container}>
             <Header />
-            <div>Componente de ONG</div>
-            <p>Nós da Vale Tech recebemos doações de empresas apoiadoras 
+            <OngCard
+              image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
+              name="Ong"
+              createdAt="08/2020"
+              email="www.ong.com.br"
+              balanceAmount="5000"
+            />
+            <p className={style.p}>Nós da Vale Tech recebemos doações de empresas apoiadoras 
                 e fazemos o repasse para ONG's com programas voltados a área de tecnologia. 
                 Para garantir que o dinheiro doado está sendo usado para as finalidades sociais, 
                 contamos com gráficos e extratos público de gastos.
             </p>
-            <Button onClick={showForm} text='Fazer Doação' />
+            <Button className={style.btn} onClick={showForm} children={'FAZER DOAÇÃO'} />
             {form ? (
-                <form>
-                  <label>Valor:</label>
-                  <Input onChange={(e) => setData({ ...data, amount: e.target.value})}/>
-                  <label>Conta:</label>
-                  <Input onChange={(e) => setData({ ...data, account: e.target.value})}/>
-                  <Button onClick={sendTransaction} />
+                <form className={style.form}>
+                  <label className={style.text}>VALOR:</label>
+                  <Input className={style.inputs} onChange={(e) => setData({ ...data, amount: e.target.value})}/>
+                  <label className={style.text}>CONTA:</label>
+                  <Input className={style.inputs} onChange={(e) => setData({ ...data, account: e.target.value})}/>
+                  <p className={style.font}>ONG INSTITUIÇÃO <br/> 45/9905958-0002</p>
+                  <Button className={style.sendBtn} onClick={sendTransaction} children={'TRANSFERIR'}/>
                 </form>
             ) : null}
             <Footer />
