@@ -14,12 +14,12 @@ const BalanceTable = (props) => {
   return (
     <section className={style.containerTable}>
         <h2 className={style.titleTable}>Extrato de Gastos</h2>
-        <table>
+        <table className={style.table}>
           {props.data.map((item, index)=>(
             <tr key={item.description} className={lineClass(index)}>
-              <td>{item.description}</td>
-              <td>{item.date}</td>
-              <td>R$ {item.amount}</td>
+              <td className={style.description}>{item.description}</td>
+              <td className={style.date}>{item.date}</td>
+              <td className={style.amount}>R$ {item.amount}</td>
             </tr>
           ))}
         </table>
