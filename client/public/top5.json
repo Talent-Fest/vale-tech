@@ -1,22 +1,22 @@
 [
   {
-    "name": "Empresa1",
+    "name": "Consultoria",
     "amount": 8000
   },
   {
-    "name": "Empresa2",
+    "name": "Start up",
     "amount": 5000
   },
   {
-    "name": "Empresa3",
+    "name": "Banco",
     "amount": 2000
   },
   {
-    "name": "Empresa4",
+    "name": "Fintech",
     "amount": 1000
   },
   {
-    "name": "Empresa5",
+    "name": "Consultoria",
     "amount": 500
   }
 ]

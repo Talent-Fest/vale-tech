@@ -20,18 +20,14 @@ const createTop5Data = (top5) => {
         datasets: [{
             data,
             backgroundColor: [
-                '#96CCE5',
-                '#ACD29A',
-                '#D58881',
-                '#FFB258',
-                '#819FDA',
+                '#553766',
+                '#e7357d',
+                '#ec6929',
             ],
             hoverBackgroundColor: [
-                '#AFDFF5',
-                '#CCF1BB',
-                '#F3A29B',
-                '#FCD09C',
-                '#A9C3F6',
+                '#7F5398',
+                '#FB5598',
+                '#F57E43',
             ]
         }]
     };
