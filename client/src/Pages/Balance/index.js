@@ -6,22 +6,30 @@ import PieChart from '../../Components/PieChart';
 import BarChart from '../../Components/BarChart';
 import ButtonCreditCard from '../../Components/ButtonCreditCard';
 import Img from '../../img/ong.png';
-import style from './style.module.css'
+import style from './style.module.css';
+import BalanceTable from '../../Components/BalanceTable';
 
-const dataBar = {
-  labels: ['Gastos', 'Arrecadação'],
-  datasets: [
-    {
-      label: 'Gráfico de consum',
-      backgroundColor: 'rgba(200,233,234)',
-      borderColor: 'rgba(255,243,254)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(234,245,255)',
-      hoverBorderColor: 'rgba(234,245,255)',
-      data: [40, 30]
-    }
-  ]
+const createdBarData = (bar) => {
+  const labels = bar.map((item) => item.label)
+  const data = bar.map((item) => item.amount)
+
+  const dataBar = {
+    labels,
+    datasets: [
+      {
+        label: 'Arrecadados x Gastos',
+        backgroundColor: 'rgb(213,131,31)',
+        borderColor: 'rgba(255,243,254)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(234,245,255)',
+        hoverBorderColor: 'rgba(234,245,255)',
+        data
+      }
+    ]
+  }
+  return dataBar;
 };
+
 
 const createTop5Data = (top5) => {
   const labels = top5.map((item) => item.name)
@@ -32,38 +40,50 @@ const createTop5Data = (top5) => {
     datasets: [{
       data,
       backgroundColor: [
-      '#96CCE5',
-      '#ACD29A',
-      '#D58881',
-      '#FFB258',
-      '#819FDA',
+        '#96CCE5',
+        '#ACD29A',
+        '#D58881',
+        '#FFB258',
+        '#819FDA',
       ],
       hoverBackgroundColor: [
-      '#AFDFF5',
-      '#CCF1BB',
-      '#F3A29B',
-      '#FCD09C',
-      '#A9C3F6',
+        '#AFDFF5',
+        '#CCF1BB',
+        '#F3A29B',
+        '#FCD09C',
+        '#A9C3F6',
       ]
     }]
   };
   return dataPie;
 }
 
-const Balance= () => {
+const Balance = () => {
   const [top5Data, setTop5Data] = useState([]);
+  const [aquesitionData, setAquesitionData] = useState([])
+  const [barData, setBarData] = useState([])
 
   useEffect(() => {
     fetch('./top5.json')
-    .then((response) =>  response.json())
-    .then(data => setTop5Data(data))
+      .then((response) => response.json())
+      .then(data => setTop5Data(data))
   }, [top5Data, setTop5Data])
-  
 
-  
+  useEffect(() => {
+    fetch('./acquisition.json')
+      .then((response) => response.json())
+      .then(data => setAquesitionData(data))
+  }, [aquesitionData, setAquesitionData])
+
+  useEffect(() => {
+    fetch('./bar.json')
+      .then((response) => response.json())
+      .then(data => setBarData(data))
+  }, [barData, setBarData])
+
   return (
-    <div className="App">
-      <Header signout="ok"/>
+    <div className={style.app}>
+      <Header signout="ok" />
       <OngCard
         image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
         name="Ong"
@@ -71,16 +91,24 @@ const Balance= () => {
         email="www.ong.com.br"
         balanceAmount="5000"
       />
-      <ButtonCreditCard>Solicitar Cartão</ButtonCreditCard>
+      <div
+        className={style.buttonCard}
+      >
+        <ButtonCreditCard />
+      </div>
       <PieChart
-      data={createTop5Data(top5Data)}
-      title="As 5 Empresas que mais apoiam"
+        data={createTop5Data(top5Data)}
+        title="As 5 Empresas que mais apoiam"
       />
       <BarChart
-      data={dataBar}
+        data={createdBarData(barData)}
+        title="Arrecadados x Gastos"
+      />
+      <BalanceTable
+        data={aquesitionData}
       />
       <img src={Img} alt="img" className={style.imgOng} />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

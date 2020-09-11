@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.module.css";
 
-const Button = (props) => {
+const Button = () => {
+  const [creditCardButtonLabel, setcreditCardButtonLabel] = useState('Solicitar Cartão')
+
+  const onRequestCard = () => {
+    setcreditCardButtonLabel ('Cartão Solicitado')
+  }
+
   return (
     <button
-      type={props.type}
-      onClick={props.onClick}
-      id={props.id}
+      onClick={onRequestCard}
       className={style.button}
+      disabled={creditCardButtonLabel==='Cartão Solicitado'}
     >
-      {props.children}
+      {creditCardButtonLabel}
     </button>
   );
 };

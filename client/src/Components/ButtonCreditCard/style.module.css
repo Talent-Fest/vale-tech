@@ -1,9 +1,12 @@
 .button {
-  width:25%;
-  background-color: #96CCE5;
-  margin: 30px;
-  padding: 15px;
+  background-color: #F49D37;
+  margin: 20px;
+  padding: 10px;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 12px;
+}
+
+.button:disabled {
+  background-color: #D8831F;
 }
