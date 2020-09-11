@@ -15,7 +15,9 @@ const Header = (props) => {
             <div className={style.buttons}>
                 {
                     props.signout &&
-                    <ButtonOut />
+                    <Link to="/">
+                        <ButtonOut />
+                    </Link>
                 }
                 {
                     props.register &&
@@ -25,7 +27,9 @@ const Header = (props) => {
                 }
                 {
                     props.login &&
-                    <Button className={style.btnLogin}>Entrar</Button>
+                    <Link to="/balance">
+                        <Button className={style.btnLogin}>Entrar</Button>
+                    </Link>
                 }
             </div>
         </header>

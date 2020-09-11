@@ -60,7 +60,7 @@ const Home = () => {
                     </p>
                     <div className={style.allOngs}>
                         <p className={style.seeMoreOng}>Ver todas as ONG's</p>
-                        <Link to="/balance" className={style.boxOng}>
+                        <Link to="/transaction" className={style.boxOng}>
                             <img src={Logo5} className={style.ong} alt="imagem de um patinho fofo" />
                             <img src={Logo2} className={style.ong} alt="imagem de um patinho fofo" />
                             <img src={Logo3} className={style.ong} alt="imagem de um patinho fofo" />

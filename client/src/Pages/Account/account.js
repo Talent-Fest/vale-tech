@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/index';
 import Button from '../../Components/Button';
@@ -75,7 +76,7 @@ const Account = () => {
           Se atente aos termos de uso e preencha os dados corretamente.</p>
         </div>
 
-        <div className='form-register'>
+        <Link className='form-register'>
           <div className='div-register'>
             <label for='name'>NOME</label>
             <Input onChange={(e) => setName(e.target.value)} className='input-register' id='name' type='text' />
@@ -124,10 +125,10 @@ const Account = () => {
             <label for='senha'>SENHA</label>
             <Input className='input-register' id='senha' type='password' />
           </div>
-          <div className='div-btn-register'>
+          <Link to="/balance" className='div-btn-register'>
             <Button onClick={cadastrar} className='btn-register' children={'Cadastrar'} />
-          </div>
-        </div>
+          </Link>
+        </Link>
 
       </div>
       <div className='footer-info-page'>
@@ -137,4 +138,5 @@ const Account = () => {
   )
 }
 
-export default Account;
+const connectedWithRouter = withRouter(Account);
+export default connectedWithRouter;
