@@ -40,7 +40,7 @@ const Transaction = () => {
   return (
     <>
       <section className={style.container}>
-        <Header signout="ok" />
+        <Header />
         <OngCard
           image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
           name="Ong"

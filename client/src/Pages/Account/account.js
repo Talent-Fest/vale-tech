@@ -65,7 +65,7 @@ const Account = () => {
   return (
     <div>
       <div>
-        <Header signout="ok" />
+        <Header />
       </div>
       <div>
         <figure className='logo-form'>
