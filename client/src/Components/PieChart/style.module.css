@@ -5,11 +5,12 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 10px;
 }
 
 .titlePie {
-  font-size: 12px;
-  color: #7C7E82;
+  font-size: 1.3em;
+  color: #8f9094;
   text-transform: uppercase;
   display: block;
   flex: 1;

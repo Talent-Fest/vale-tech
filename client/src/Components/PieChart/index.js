@@ -14,7 +14,7 @@ const PieChart = (props) => {
 						display: true,
 						labels: {
 							fontSize: 10,
-							boxWidth:15
+							boxWidth:10
 						}
 					}
 				}}
