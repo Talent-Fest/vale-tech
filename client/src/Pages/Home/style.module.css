@@ -1,0 +1,49 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 90%;
+  text-align: center;
+}
+
+.logoHome {
+  width: 90%;
+}
+
+.aboutUs {
+  text-align: left;
+  font-size: 12px;
+  color: #7c7e82;
+}
+
+.ourMission {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  font-size: 12px;
+  color: #7c7e82;
+}
+
+.boxOng {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.ong {
+  width: 25%;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.allOngs {
+  text-align: right;
+}
+
+.seeMoreOng {
+  color: #748FC5;
+  font-size: 12px;
+  text-decoration: underline;
+}

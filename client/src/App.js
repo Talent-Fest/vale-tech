@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 /*Páginas*/
-import Home from '../src/Pages/home';
+import Home from '../src/Pages/Home/home';
 import Account from './Pages/Account/account';
 import Transaction from './Pages/Transaction/transaction';
 import Balance from './Pages/Balance';

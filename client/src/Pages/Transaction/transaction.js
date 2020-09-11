@@ -24,22 +24,22 @@ const Transaction = () => {
       body: JSON.stringify({
         "amount": data.amount,
         "toFinancialOperationKey": data.account,
-        "transferCode":"574247d0-10a8-47c9-b12b-66529d5a27a0",
-        "summary":"Transferencia P2P para teste",
-        "idempotencyKey":"fdce002c-43a7-49b9-8426-c5fb7f79affb"
+        "transferCode": "574247d0-10a8-47c9-b12b-66529d5a27a0",
+        "summary": "Transferencia P2P para teste",
+        "idempotencyKey": "fdce002c-43a7-49b9-8426-c5fb7f79affb"
       }),
       redirect: 'follow'
     };
-          
+
     fetch(`https://qacst-ppi.hubprepaid.com.br/partner-interface/accounts/${account}/transfer`, requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-    }
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+  }
 
     return (
         <section className={style.container}>
-            <Header />
+            <Header signout="ok" />
             <OngCard
               image="https://www.clp.org.br/wp-content/uploads/2018/02/19619.jpg"
               name="Ong"

@@ -19,9 +19,11 @@
     flex-wrap: wrap;
   }
 
-  .footerItem {
-    flex:1;
+  .footerItem{
+    flex: 1 1;
     padding: 10px;
+    text-align: center;
+    font-size: 10px;
   }
 }
 
