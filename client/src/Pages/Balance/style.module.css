@@ -2,3 +2,9 @@
   width: 65%;
   margin:10px;
 }
+
+.buttonCard {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
